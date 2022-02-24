@@ -1,0 +1,463 @@
+
+#main {
+	font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif !important;
+	font-weight:100;
+}
+
+.sidebar {
+	max-width:300px;
+	min-width:160px;
+	background-color:#f3f3f3; 
+	padding:10px;
+}
+
+.playlist {
+	border-bottom:1px solid rgba(0,0,0,0.01);
+	padding:5px;
+	cursor:default;
+}
+
+.playlist:hover {
+	border-bottom:1px solid rgba(0,0,0,0.05);
+}
+
+.playlist:hover label {
+	color:#333;
+}
+
+
+.play_button {
+	font-size:35px;
+}
+
+.controls {
+	display:flex;
+	padding:10px;
+	user-select: none;
+	cursor:default;
+}
+
+.controls_container {
+	border-bottom:1px solid rgba(0,0,0,0.1);
+}
+
+.controls .controls_button {
+	margin:auto;
+	color:rgba(0,0,0,0.25);
+}
+
+.controls .controls_button:hover {
+	color:#333 !important;
+}
+
+.controls .play_button {
+	justify-content:center;
+	text-align:center;
+}
+
+.previous_button {
+	transform: rotate(90deg);
+	transform: scaleX(-1);
+}
+
+.reading_list_button {
+	min-width:35;
+}
+
+.playlist.selected {
+	background-color:white !important;
+}
+
+.loading_screen button {
+	color: #fff !important;
+	background-color: #000;
+	padding: 10px;
+	padding-top: 0px;
+	-moz-appearance: unset;
+}
+
+.seeker {
+	padding-left:3px;
+	padding-right:3px;
+	user-select: none;
+	cursor:default;
+}
+
+.delete_dialog {
+	text-align:center;
+}
+
+.playlist_view {
+	background-color:#fff;
+}
+
+.icon {
+	font-family:icofont;
+}
+
+.right {
+	float:right;
+	text-align: right;
+	margin-left: auto;
+	display: flex;
+	align-content: right;
+	justify-content: right;
+	align-self: flex-end;
+}
+
+listcell {
+	overflow:hidden;
+}
+
+listcol {
+	/*min-width:100px;*/
+}
+
+.playlist_header {
+	display:flex;
+}
+
+#toolbar_buttons label {
+	color:#ccc;
+	padding:5px;
+	font-size:22px;
+}
+
+.back_button {
+	color:#ccc;
+	padding:5px;
+	font-size:22px;
+}
+
+#toolbar_buttons label:hover {
+	color:#333;
+}
+
+.back_button:hover {
+	color:#333;
+}
+
+.toolbar {
+	background-color:#f0f0f0;
+}
+
+.main_container {
+	background-color:#f8f8f8;
+}
+
+.settings_label {
+	padding:7px;
+}
+
+
+/*#playlist {
+ 	-moz-binding: url('chrome://music/content/playlist.xml#playlist');
+}*/
+
+/*treechildren::-moz-tree-checkbox(checked) {
+    list-style-image: url("chrome://global/skin/checkbox/cbox-check.gif");
+}*/
+treechildren::-moz-tree-checkbox {
+	/* unchecked checkbox treecells. This style MUST come before treechildren::-moz-tree-checkbox(checked) otherwise it won't take effect. */
+	list-style-image: none;
+}
+
+treechildren::-moz-tree-checkbox(checked) {
+	/* checked checkbox treecells. cbox-check.gif isn't available in
+	 Firefox 1, 2, and 3 in Mac OS X so you should specify a URL to an image
+	 in your extension or elsewhere. */
+	list-style-image: url("chrome://global/skin/checkbox/cbox-check.gif");
+}
+
+treechildren::-moz-tree-checkbox(disabled) {
+	/* disabled checkbox treecells. cbox-check.gif isn't available in
+	 Firefox 1, 2, and 3 in Mac OS X, so you should specify a URL to an image
+	 in your extension or elsewhere. */
+	list-style-image: url("chrome://global/skin/checkbox/cbox-check-dis.gif");
+}
+
+.container {
+    background: #fefefe;
+    color: #333;
+    border:1px solid #e9e9e9;
+}
+
+/*.container:hover .scrolling {
+	animation: marquee 3s linear infinite;
+}*/
+
+.scrolling {
+	animation-play-state: paused;
+	text-align:center;
+}
+
+.center {
+	text-align:center;
+
+}
+
+@keyframes marquee {
+  from {
+    transform: translateY(100%);
+  }
+  to { 
+    transform: translateY(-100%);
+  }
+}
+
+.loading_screen {
+	position:fixed;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	background:rgba(0,0,0,0.85);
+	z-index: 999;
+}
+
+.loading_screen label {
+	text-align:center;
+	vertical-align:middle;
+	width:100%;
+	color:#fff;
+}
+
+.loading_screen > hbox {
+	margin-left: auto;
+	margin-right: auto;
+	width:100%;
+	height:100%;
+}
+
+.loading_screen > vbox {
+	margin-left: auto;
+	margin-right: auto;
+	width:100%;
+	height:100%;
+}
+
+
+.blur {
+	filter:blur(15px);
+	transition: all 1.2s linear;	
+}
+
+.sidebar_buttons label {
+	text-align:center;
+	color:#ddd;
+}
+
+.sidebar_buttons label:hover {
+	text-align:center;
+	color:#333;
+}
+
+.new_playlist_container {
+/*	margin-top:25%;*/
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.children {
+	padding-left:10px;
+}
+
+button {
+	color:#333 !important;
+}
+
+.controls .options label {
+	color:#ddd;
+	padding:15px;
+}
+
+.controls .options label:hover {
+	color:#333;
+}
+
+.controls .options .toggled_on {
+	color:#333 !important;
+}
+
+.tags_container checkbox {
+	font-weight:bold;
+}
+
+/*.marquee {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    background: #fefefe;
+    color: #333;
+    border:1px solid #e9e9e9;
+	writing-mode: vertical-rl;
+	text-orientation: sideways-right;
+}
+
+.marquee .artist_info {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    -moz-transform: translateX(100%);
+    transform: translateX(100%);
+    -moz-animation: marquee 20s linear infinite;
+    animation: marquee 20s linear infinite;
+
+	overflow: hidden;
+	white-space: nowrap;
+	display: inline-flex;
+}
+
+.marquee .song_info {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    -moz-transform: translateX(100%);
+    transform: translateX(100%);
+    -moz-animation: marquee 25s linear infinite;
+    animation: marquee 25s linear infinite;
+	overflow: hidden;
+	white-space: nowrap;
+	display: inline-flex;
+}
+
+@keyframes marquee {
+	0% { left: 100%; }
+	50% { left: -100%; }
+	100% {left: -100%}
+}
+
+@-moz-keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+    }
+}*/
+
+/*.marquee {
+	height: 35px;
+	overflow: hidden;
+	position: relative;
+    background: #fefefe;
+    color: #333;
+    border:1px solid #e9e9e9;
+	padding: 8px 0 4px 0;
+	display:-moz-stack;
+}
+
+.marquee .artist_info {
+	animation: marquee_animation 16s linear infinite;
+}
+
+.marquee .song_info {
+	animation: marquee_animation 16s linear infinite;
+}
+/*
+.marquee .marqueetwo{
+	animation: marquee 10s linear 2.5s infinite 
+}
+
+.marquee .marqueethree{
+	animation: marquee 10s linear 5s infinite
+}
+
+.marquee .marqueefour{
+	animation: marquee 10s linear 7.5s infinite
+}*/
+
+/*.marquee label {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+
+.marquee_container {
+	display:flex;
+}
+
+.marquee:hover label {
+	animation-play-state: paused;
+}
+
+	
+@keyframes marquee_animation {
+	0% { left: 100%; }
+	100% { left: -100%; }
+}*/
+
+
+
+
+
+#formdrafts_toggle { 
+    list-style-image: url("chrome://formdraft/skin/formdraft_large.png"); 
+} toolbar[iconsize="small"] 
+
+#formdrafts_toggle { 
+    list-style-image: url("chrome://formdraft/skin/formdraft_small.png"); 
+}
+
+.draft_item {
+	
+	overflow-y:auto; 
+	/**/
+	font-weight:400 !important; 
+	width:100% !important;
+	padding:10px;
+	border-bottom:1px solid rgba(0,0,0,0.2);
+	cursor:default;
+	/*text-overflow:clip; overflow:hidden; white-space:nowrap;*/
+}
+
+
+.selected {
+	background-color:rgba(0,0,0,0.02) !important;
+}
+
+/*.truncate {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}*/
+
+
+#form_drafts {
+	overflow-y:scroll;	
+	position:absolute;
+	display:block;
+}
+
+#form_drafts_content {
+	width: 100%;
+	min-width: 20px !Important;
+	overflow: auto;
+	position: absolute;
+	overflow: auto;
+	top: 30px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+.icofont {
+	font-family:icofont !important;	
+}
+
+@font-face {
+  font-family: icofont;
+  src: url('chrome://sitestyles/skin/icofont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+} 
+
+.truncate {
+	width:200;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*-moz-binding: url('ellipsis.xml#ellipsis');    /* for Firefox; details here */
+}
